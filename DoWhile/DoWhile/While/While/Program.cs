@@ -32,12 +32,14 @@ else
     Console.WriteLine("1-Iphone\n2-Xiaomi\n3-Huawei\n4-Samsung");
     Console.WriteLine("Palun tee oma valik, kirjutades vastav arv");
     int kasutajatelefon = int.Parse(Console.ReadLine());
-    while(kasutajatelefon < 1 && kasutajatelefon > 4)
+    while (kasutajatelefon < 1 && kasutajatelefon > 4)
     {
         kasutajatelefon = int.Parse(Console.ReadLine());
         Console.WriteLine("Palun tee oma valik, kirjutades vastav arv");
+    }
+        
         switch (kasutajatelefon)
-        {
+    { 
             case 1:
                 Console.WriteLine("Aitäh, oma Iphone saad tagasi 1 nädala pärast");
                 break;
@@ -56,4 +58,3 @@ else
         
         }
     }
-}
