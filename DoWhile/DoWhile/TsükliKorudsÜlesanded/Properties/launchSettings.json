@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TsükliKorudsÜlesanded": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Tsüklikordusülesanded": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

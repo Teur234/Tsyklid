@@ -1,74 +1,45 @@
-﻿
-Console.WriteLine("Mis on su lemmikvärvid? sisesta ükshaaval \nKui rohkem värve ei ole, kirjuta \"rohkem pole\"");
-List<string> lemmikvärvid = new List<string>();
-
-string sisestus = "";
+﻿// 1. külalised sünnipäeval
+/* dowhile
+küsi kasutajalt tema eesnime, tsükkel peab toimima niikaua kuni kasutaja on sisestanud midagi, et sisestus tühi "" ei oleks.
+*/
+Console.WriteLine("Palun sisesta oma eesnimi");
+string nimi = "";
 do
 {
-    Console.WriteLine("Sisesta 1 värv korraga: ");
-    sisestus = Console.ReadLine();
-    if (sisestus != "rohkem pole")
-    {
-        lemmikvärvid.Add(sisestus);
-    }
+    Console.WriteLine("sinu nimi on");
+    nimi = Console.ReadLine();
+} while (nimi == "");
+/* while
+siis küsi kasutajalt tema sünnikuupäeva kolme while tsükliga, kõigepealt päev, arvuna, siis kuu, nimena, ning siis aasta, arvuna
+päeva küsimise juures tuleb jälgida et kuupäev oleks vahemikus 1-31,
+kuu küsimise juures peab uuesti küsima, kui nimetus ei esine programmis (kas switch-case, if-elseif, või .Contains() abiga)
+aasta juures ei tohi olla sünniaasta 19ndas sajandis (18xx) ega tulevikus. (tekib ka vahemik)
+*/
 
-} while (sisestus != "rohkem pole");
 
-foreach (var värv in lemmikvärvid)
+List<int> sünniaeg = new
+List<int>();
+String sisend = "";
+int päev = 0;
+int kuu = 0;
+int aasta = 0;
+while (päev == 9)
 {
-    switch (värv)
-    {
-        case "punane":
-            Console.BackgroundColor = ConsoleColor.Red;
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("p u n a n e");
-            break;
-        case "oranž":
-            Console.BackgroundColor = ConsoleColor.Magenta;
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Kahjuks ei ole oranz saadaval");
-            break;
-        case "kollane":
-
-            Console.BackgroundColor = ConsoleColor.Yellow;
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine(" k o l l a n e");
-            break;
-        case "roheline":
-            Console.BackgroundColor = ConsoleColor.Green;
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("r o h e l i n e");
-            break;
-        case "lilla":
-            Console.BackgroundColor = ConsoleColor.Cyan;
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("l i l l a");
-            break;
-        case "valge":
-            Console.BackgroundColor = ConsoleColor.Black;
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("v a l g e");
-            break;
-        case "must ":
-            Console.BackgroundColor = ConsoleColor.Black;
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("m u s t ");
-            break;
-        case "pruun":
-            Console.BackgroundColor = ConsoleColor.DarkYellow;
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("p r u u n ");
-            break;
-        case "hall":
-            Console.BackgroundColor = ConsoleColor.Gray;
-            Console.ForegroundColor = ConsoleColor.Black;
-            Console.WriteLine("h a l l ");
-            break;
-        default:
-            Console.BackgroundColor = ConsoleColor.Black;
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("$ Sellist värvi ei tunne {värv}");
-            break;
-    }
+    Console.WriteLine("Sisesta sünnipäeva päev");
+    sisend = Console.ReadLine();
 }
 
+
+/* for
+küsi kasutajalt tema sünnipäevale küllatulijaid uude listi for tsükliga, iga tsükkel sisestab uue inimesenime, kuni kasutaja ütleb "kõik"
+*/
+/* foreach
+küsi kasutajalt kas on mõni külaline keda ta siiski näha ei tahaks? ning võrdle foreach tsüklis kõik külalised kasutaja sisestatuga.
+eemalda see külaline kui ta nimekirjas on, kui külalist nimekirjast ei leita, siis ütle "sellist inimest sa pole kutsunudki"
+*/
+
+
+
+/* 2. Üldine ülesanne
+kirjuta programm mis küsib kasutajalt tema lemmikvärvi, ning joonistab talle tema lemmimkvärvi ruudu, mille sisse kirjutad vastava värvi ainult keskmisele reale. Kasutada võib vabalt valitud tsüklitüüpi
+*/
