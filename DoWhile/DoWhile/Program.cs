@@ -16,20 +16,26 @@ kuu küsimise juures peab uuesti küsima, kui nimetus ei esine programmis (kas s
 aasta juures ei tohi olla sünniaasta 19ndas sajandis (18xx) ega tulevikus. (tekib ka vahemik)
 */
 
-
-List<int> sünniaeg = new
-List<int>();
-String sisend = "";
-int päev = 0;
-int kuu = 0;
-int aasta = 0;
-while (päev == 9)
+Console.WriteLine("Sisesta oma  sünnikuupäeva päev");
+int sünnikuupäev = 0;
+while (sünnikuupäev < 0 && sünnikuupäev > 31);
 {
-    Console.WriteLine("Sisesta sünnipäeva päev");
-    sisend = Console.ReadLine();
+    Console.WriteLine("Sisesta kuupäev");
+        sünnikuupäev = int.Parse(Console.ReadLine());
+
 }
+Console.WriteLine("Sisesta ka sünnikuupäeva kuu.");
+string sünnikuu = "";
+while (sünnikuu == "")
+{
+    Console.WriteLine("Sisesta kuu");
+    sünnikuu = Console.ReadLine();
+    switch (sünnikuu)
+    {
+        case "jaanuar":
 
-
+    }
+}
 /* for
 küsi kasutajalt tema sünnipäevale küllatulijaid uude listi for tsükliga, iga tsükkel sisestab uue inimesenime, kuni kasutaja ütleb "kõik"
 */
