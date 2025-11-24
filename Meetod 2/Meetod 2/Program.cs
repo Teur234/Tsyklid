@@ -46,8 +46,8 @@
         }
         public static int sinueelarvepäevas(float eelarve, string kasuatajanimi)
         {
-            int sinueelarvepäevas = 7;
-            return sinueelarvepäevas;
+            double eelarvepäevas = 7;
+            return (int)eelarvepäevas;
         }
     }
 }
