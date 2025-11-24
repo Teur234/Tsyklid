@@ -32,7 +32,7 @@ while (sünnikuu == "")
     sünnikuu = Console.ReadLine();
     switch (sünnikuu)
     {
-        case "jaanuar":
+       
 
     }
 }
